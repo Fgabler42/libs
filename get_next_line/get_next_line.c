@@ -6,11 +6,11 @@
 /*   By: fgabler <fgabler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:46:08 by fritzgabler       #+#    #+#             */
-/*   Updated: 2023/05/06 11:45:35 by fgabler          ###   ########.fr       */
+/*   Updated: 2023/07/04 18:47:03 by fgabler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "Include/get_next_line.h"
 
 // free_it: is a function that frees memory allocated
 // to a string, but only if the string is not NULL.

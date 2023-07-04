@@ -6,7 +6,7 @@
 #    By: fgabler <mail@student.42heilbronn.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/03 15:20:49 by fgabler           #+#    #+#              #
-#    Updated: 2023/07/03 16:47:34 by fgabler          ###   ########.fr        #
+#    Updated: 2023/07/04 18:44:34 by fgabler          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,40 @@ LIBFTSRC = 	./libft/ft_atoi.c ./libft/ft_bzero.c ./libft/ft_calloc.c \
 			./libft/ft_strrchr.c ./libft/ft_strtrim.c ./libft/ft_substr.c \
 			./libft/ft_tolower.c ./libft/ft_toupper.c
 
+LIBTFT_OBJS = $(LIBFTSRC:.c=.o)
+#--------------------------------------------------------------------------#
 
 
+#--------------------------- ft_Printf ---------------------------------------#
+
+FT_PRINTFSRC = 	./ft_printf/printf.c ./ft_printf/ft_print_hex.c \
+				./ft_printf/ft_printf ./ft_printf/ft_print_ptr.c \
+				./ft_printf/ft_print_uns.c ./ft_printf/ft_print_num.c \
+				./ft_printf/ft_print_str.c 
+
+FT_PRINT_OBJS = $(FT_PRINTFSRC:.c=.o)
+
+#--------------------------------------------------------------------------#
+
+#--------------------------- gnl ---------------------------------------#
+
+GNLSRCS = ./get_next_line/get_next_line.c ./get_next_line/get_next_line_utils.c
+
+GNLOBJS = $(GNLSRCS:.c=.o)
+
+#--------------------------------------------------------------------------#
+
+OBJS = $(LIBFT_OBJS) $(FT_PRINTF_OBJS) $(GNLOBJS)
+
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	@ar -rcs $(NAME) $(OBJS)
+
+clean:
+	@rm -f $(OBJS)
+	@rm -rf *.o
+
+fclean: clean
+	@rm -f $(NAME)
 
