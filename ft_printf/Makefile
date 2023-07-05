@@ -6,11 +6,11 @@
 #    By: fgabler <fgabler@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/12 08:39:49 by fritzgabler       #+#    #+#              #
-#    Updated: 2023/05/14 11:41:06 by fgabler          ###   ########.fr        #
+#    Updated: 2023/07/05 09:33:27 by fgabler          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := libftprintf.a
+NAME := ft_printf.a
 CFLAGS ?= -Wall -Wextra -Werror
 
 SRCS := ft_print_hex.c ft_print_num.c ft_print_ptr.c \
