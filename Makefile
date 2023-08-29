@@ -7,7 +7,7 @@ ARFLAGS := -rcs
 ###############################################################################
 ###############################################################################
 
-VPATH =	 array char gnl io list memory string printf
+VPATH =	 array char dubl_circular_list gnl io list memory string printf
 
 
 
@@ -16,6 +16,8 @@ SRC_ARR :=	ft_copy_dubble_array.c ft_count_doubble_array_quantity.c	\
 
 SRC_CHAR :=	ft_isalnum.c ft_isalpha.c ft_isascii.c	ft_isdigit.c		\
 			ft_isprint.c ft_tolower.c ft_toupper.c
+
+SRC_CLIST := ft_clstiter.c ft_clstnew.c ft_clstadd_back.c
 
 SRC_GNL :=	ft_get_next_line.c ft_get_next_line_utils.c
 
@@ -38,7 +40,7 @@ SRC_STR :=	ft_atoi.c ft_itoa.c				\
 			ft_strnstr.c ft_strrchr.c ft_strtrim.c			\
 			ft_substr.c
 
-SRCS := $(SRC_ARR) $(SRC_CHAR) $(SRC_GNL) $(SRC_IO) $(SRC_LIST) \
+SRCS := $(SRC_ARR) $(SRC_CHAR) $(SRC_CLIST) $(SRC_GNL) $(SRC_IO) $(SRC_LIST) \
 			$(SRC_MEM) $(SRC_PRINT) $(SRC_STR)
 
 ###############################################################################
