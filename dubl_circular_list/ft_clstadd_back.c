@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_clstadd_back.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fritzgabler <fritzgabler@student.42.fr>    +#+  +:+       +#+        */
+/*   By: fgabler <mail@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/04 16:44:18 by fritzgabler       #+#    #+#             */
-/*   Updated: 2023/08/29 12:36:24 by fgabler          ###   ########.fr       */
+/*   Created: 2023/08/29 13:58:30 by fgabler           #+#    #+#             */
+/*   Updated: 2023/08/29 14:31:05 by fgabler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_clstadd_back(t_dubl_list **lst, t_dubl_list *new)
 {
-	t_list	*last;
+	t_dubl_list *tail;
 
-	if (*lst)
+	tail = *lst;
+	if (tail != NULL)
 	{
-		last = ft_lstlast(*lst);
-		if (last)
-			last->next = new;
+		tail = tail->prev;
+		tail->next = new;
+		(*lst)->prev = new;
+		new->prev = tail;
+		new->next = *lst;
 	}
 	else
+	{
 		*lst = new;
+		new->prev = new;
+		new->next = new;
+		
+	}
 }

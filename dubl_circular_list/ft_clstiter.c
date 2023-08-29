@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_clstiter.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fritzgabler <fritzgabler@student.42.fr>    +#+  +:+       +#+        */
+/*   By: fgabler <mail@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/04 16:44:18 by fritzgabler       #+#    #+#             */
-/*   Updated: 2023/08/29 12:36:24 by fgabler          ###   ########.fr       */
+/*   Created: 2023/08/29 13:28:25 by fgabler           #+#    #+#             */
+/*   Updated: 2023/08/29 13:53:49 by fgabler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_clstiter(t_dubl_list *lst, void (*f)(void *), t_direction direction)
 {
-	t_list	*last;
+	t_dubl_list *head;
 
-	if (*lst)
+	head = lst;
+	while (lst)
 	{
-		last = ft_lstlast(*lst);
-		if (last)
-			last->next = new;
+		f (lst->content);
+		if ( direction == clockwise)
+			lst = lst->next;
+		else
+			lst = lst->prev;
+		if (lst == head)
+			return ;
 	}
-	else
-		*lst = new;
 }

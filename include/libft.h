@@ -6,7 +6,7 @@
 /*   By: fgabler <fgabler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:56:04 by fgabler           #+#    #+#             */
-/*   Updated: 2023/07/29 19:46:09 by fgabler          ###   ########.fr       */
+/*   Updated: 2023/08/29 13:40:48 by fgabler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 #  define BUFFER_SIZE 42
 # endif
 
+
+
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
@@ -26,11 +28,26 @@
 # include <fcntl.h>
 # include <stddef.h>
 
+/* STRUCTS */
+typedef enum e_bool{false, true} t_bool;
+
+/* double circular lists */
+typedef enum e_direction{clockwise, counter_clockwise} t_direction;
+
 typedef struct s_list
 {
-	void				*content;
-	struct s_list		*next;
+	void					*content;
+	struct s_list			*next;
 }	t_list;
+
+typedef struct s_dubl_list
+{
+	void					*content;
+	struct s_dubl_list		*prev;
+	struct s_dubl_list		*next;
+}	t_dubl_list;
+
+
 
 /* libft */
 int		ft_isalpha(int c);

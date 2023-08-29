@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_clstnew.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fritzgabler <fritzgabler@student.42.fr>    +#+  +:+       +#+        */
+/*   By: fgabler <mail@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/04 16:44:18 by fritzgabler       #+#    #+#             */
-/*   Updated: 2023/08/29 12:36:24 by fgabler          ###   ########.fr       */
+/*   Created: 2023/08/29 12:26:54 by fgabler           #+#    #+#             */
+/*   Updated: 2023/08/29 13:21:56 by fgabler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+t_dubl_list *ft_clstnew(void *content)
 {
-	t_list	*last;
-
-	if (*lst)
-	{
-		last = ft_lstlast(*lst);
-		if (last)
-			last->next = new;
-	}
-	else
-		*lst = new;
+	t_dubl_list *lst;
+	lst = (t_dubl_list *) malloc(sizeof(t_dubl_list));
+	if (!lst)
+		return (NULL);
+	lst->content = content;
+	lst->next = NULL;
+	lst->prev = NULL;
+	return (lst);
 }
