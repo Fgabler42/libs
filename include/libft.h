@@ -6,7 +6,7 @@
 /*   By: fgabler <fgabler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:56:04 by fgabler           #+#    #+#             */
-/*   Updated: 2023/08/30 14:54:58 by fgabler          ###   ########.fr       */
+/*   Updated: 2023/08/30 17:58:20 by fgabler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,23 @@ typedef struct s_list
 	struct s_list			*next;
 }	t_list;
 
+typedef struct s_struct
+{
+	int		val;
+	int		idx;
+} t_struct;
+
+typedef union u_union
+{
+	t_struct	split;
+	void		*ptr;
+	char		*s;
+	int			i;
+} t_union;
+
 typedef struct s_dubl_list
 {
-	void					*content;
+	t_union					content;
 	struct s_dubl_list		*prev;
 	struct s_dubl_list		*next;
 }	t_dubl_list;
@@ -78,7 +92,7 @@ char		**copy_dubble_array(char **array);
 void		ft_clstiter(
 				t_dubl_list *lst, void (*f)(void *), t_direction direction);
 void		ft_clstadd_back(t_dubl_list **lst, t_dubl_list *new);
-t_dubl_list	*ft_clstnew(void *content);
+t_dubl_list	*ft_clstnew(t_union content);
 void		ft_clstclear(t_dubl_list **lst);
 void		ft_clstadd_front(t_dubl_list **lst, t_dubl_list *new);
 
