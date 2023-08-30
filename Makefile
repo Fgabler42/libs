@@ -17,7 +17,8 @@ SRC_ARR :=	ft_copy_dubble_array.c ft_count_doubble_array_quantity.c	\
 SRC_CHAR :=	ft_isalnum.c ft_isalpha.c ft_isascii.c	ft_isdigit.c		\
 			ft_isprint.c ft_tolower.c ft_toupper.c
 
-SRC_CLIST := ft_clstiter.c ft_clstnew.c ft_clstadd_back.c
+SRC_CLIST := ft_clstiter.c ft_clstnew.c ft_clstadd_back.c 				\
+			 ft_clstclear.c ft_clstadd_front.c
 
 SRC_GNL :=	ft_get_next_line.c ft_get_next_line_utils.c
 
