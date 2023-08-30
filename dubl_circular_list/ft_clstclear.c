@@ -6,7 +6,7 @@
 /*   By: fgabler <mail@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 14:30:16 by fgabler           #+#    #+#             */
-/*   Updated: 2023/08/30 14:50:00 by fgabler          ###   ########.fr       */
+/*   Updated: 2023/08/30 16:57:10 by fgabler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,11 @@ void	ft_clstclear(t_dubl_list **lst)
 	while (guard)
 	{
 		next = current->next;
-		current = NULL;
 		free (current);
+		current = NULL;
 		current = next;
 		if (current == (*lst))
 			guard = true;
 	}
-	free (lst);
+	*lst = NULL;
 }
-
