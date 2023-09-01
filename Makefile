@@ -34,7 +34,7 @@ SRC_MEM :=	ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c				\
 SRC_PRINT := ft_print_hex.c ft_print_num.c ft_print_ptr.c				\
 			ft_print_str.c ft_print_uns.c ft_printf.c ft_put_char_mod.c
 
-SRC_STR :=	ft_atoi.c ft_itoa.c				\
+SRC_STR :=	ft_atoi.c ft_itoa.c	ft_strtol.c			\
 			ft_split.c ft_strdup.c				\
 			ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c		\
 			ft_strlen.c ft_strmapi.c ft_strncmp.c			\
