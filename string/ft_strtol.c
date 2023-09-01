@@ -6,7 +6,7 @@
 /*   By: fgabler <fgabler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 11:42:56 by fgabler           #+#    #+#             */
-/*   Updated: 2023/09/01 17:31:06 by fgabler          ###   ########.fr       */
+/*   Updated: 2023/09/01 19:38:40 by fgabler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static void	ft_checksigne(const char *str, int *pos, int *neg)
 	}
 }
 
-int	ft_strtol(const char *str)
+long	ft_strtol(const char *str)
 {
 	int		i;
 	int		neg;
