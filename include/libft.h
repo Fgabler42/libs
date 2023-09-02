@@ -6,7 +6,7 @@
 /*   By: fgabler <fgabler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:56:04 by fgabler           #+#    #+#             */
-/*   Updated: 2023/09/01 19:39:06 by fgabler          ###   ########.fr       */
+/*   Updated: 2023/09/02 09:17:40 by fgabler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ typedef struct s_struct
 {
 	int		val;
 	int		idx;
-} t_struct;
+}	t_struct;
 
 typedef union u_union
 {
@@ -50,7 +50,7 @@ typedef union u_union
 	void		*ptr;
 	char		*s;
 	int			i;
-} t_union;
+}	t_union;
 
 typedef struct s_dubl_list
 {
