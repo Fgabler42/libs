@@ -6,7 +6,7 @@
 /*   By: fgabler <fgabler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:56:04 by fgabler           #+#    #+#             */
-/*   Updated: 2023/09/03 14:30:00 by fgabler          ###   ########.fr       */
+/*   Updated: 2023/09/03 18:28:18 by fgabler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@
 
 typedef void	*t_content;
 
-#	endif 
+# endif
 
 /* STRUCTS */
 typedef enum e_bool{false, true}	t_bool;
@@ -44,7 +44,6 @@ typedef struct s_list
 	t_content				*content;
 	struct s_list			*next;
 }	t_list;
-
 
 typedef union u_union
 {
