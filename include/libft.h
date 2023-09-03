@@ -6,7 +6,7 @@
 /*   By: fgabler <fgabler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:56:04 by fgabler           #+#    #+#             */
-/*   Updated: 2023/09/02 16:39:30 by fgabler          ###   ########.fr       */
+/*   Updated: 2023/09/03 13:54:39 by fgabler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,13 @@
 # include <fcntl.h>
 # include <stddef.h>
 
+# ifndef CUSTOM_CONTENT
+#  define CUSTOM_CONTENT
+
+typedef void	*t_content;
+
+#	endif 
+
 /* STRUCTS */
 typedef enum e_bool{false, true}	t_bool;
 
@@ -34,19 +41,14 @@ typedef enum e_direction{clockwise, counter_clockwise}	t_direction;
 
 typedef struct s_list
 {
-	void					*content;
+	t_content				*content;
 	struct s_list			*next;
 }	t_list;
 
-typedef struct s_struct
-{
-	int		val;
-	int		idx;
-}	t_struct;
 
 typedef union u_union
 {
-	t_struct	split;
+	t_content	split;
 	void		*ptr;
 	char		*s;
 	int			i;
@@ -88,7 +90,7 @@ int			count_doupple_arry_quantity(char **array);
 void		free_dubble_array(char **arr);
 char		**copy_dubble_array(char **array);
 long		ft_strtol(const char *str);
-void		ft_clst_print(t_dubl_list *head);
+void		ft_clst_print(t_dubl_list *head, void *content, char *typ);
 
 /* dubble cirular lists */
 void		ft_clstadd_back(t_dubl_list **lst, t_dubl_list *new);
