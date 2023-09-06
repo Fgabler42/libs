@@ -6,7 +6,7 @@
 /*   By: fgabler <mail@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 14:30:16 by fgabler           #+#    #+#             */
-/*   Updated: 2023/08/30 16:57:10 by fgabler          ###   ########.fr       */
+/*   Updated: 2023/09/07 01:01:53 by fgabler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_clstclear(t_dubl_list **lst)
 	t_dubl_list	*next;
 	int			guard;
 
-	guard = false;
+	guard = true;
 	current = *lst;
 	while (guard)
 	{
@@ -27,7 +27,7 @@ void	ft_clstclear(t_dubl_list **lst)
 		current = NULL;
 		current = next;
 		if (current == (*lst))
-			guard = true;
+			guard = false;
 	}
 	*lst = NULL;
 }
