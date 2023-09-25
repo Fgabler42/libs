@@ -6,7 +6,7 @@
 /*   By: fgabler <fgabler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:56:04 by fgabler           #+#    #+#             */
-/*   Updated: 2023/09/25 16:25:01 by fgabler          ###   ########.fr       */
+/*   Updated: 2023/09/25 16:33:36 by fgabler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,7 @@ void			free_dubble_array(char **arr);
 char			**copy_dubble_array(char **array);
 long			ft_strtol(const char *str);
 unsigned char	*ft_strjoin_mod_uns(char *s1, char *s2);
+size_t			ft_strlen_uns(const char *str);
 
 /* dubble cirular lists */
 void			ft_clstadd_back(t_dubl_list **lst, t_dubl_list *new);
