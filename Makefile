@@ -34,12 +34,14 @@ SRC_MEM :=	ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c				\
 SRC_PRINT := ft_print_hex.c ft_print_num.c ft_print_ptr.c				\
 			ft_print_str.c ft_print_uns.c ft_printf.c ft_put_char_mod.c
 
-SRC_STR :=	ft_atoi.c ft_itoa.c	ft_strtol.c			\
-			ft_split.c ft_strdup.c				\
+SRC_STR :=	ft_atoi.c ft_itoa.c	ft_strtol.c								\
+			ft_split.c ft_strdup.c										\
 			ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c		\
-			ft_strlen.c ft_strmapi.c ft_strncmp.c			\
-			ft_strnstr.c ft_strrchr.c ft_strtrim.c			\
-			ft_substr.c ft_strjoin_mod_uns.c ft_strlen_uns.c
+			ft_strlen.c ft_strmapi.c ft_strncmp.c						\
+			ft_strnstr.c ft_strrchr.c ft_strtrim.c						\
+			ft_substr.c ft_strjoin_mod_uns.c ft_strlen_uns.c			\
+			ft_putendl_fd.c ft_putchar_fd.c ft_putnbr_fd.c				\
+			ft_putstr_fd.c
 
 SRCS := $(SRC_ARR) $(SRC_CHAR) $(SRC_CLIST) $(SRC_GNL) $(SRC_IO) $(SRC_LIST) \
 			$(SRC_MEM) $(SRC_PRINT) $(SRC_STR)
