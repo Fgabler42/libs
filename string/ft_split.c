@@ -6,7 +6,7 @@
 /*   By: fgabler <fgabler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 13:54:00 by fgabler           #+#    #+#             */
-/*   Updated: 2023/04/12 15:35:45 by fgabler          ###   ########.fr       */
+/*   Updated: 2023/11/23 16:08:09 by fgabler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ static void	ft_allocate(const char *s, char c, char **ret)
 			return ;
 		}
 		if (s[start])
-				start = start + sublen;
+			start = start + sublen;
 		loc++;
 	}
 }

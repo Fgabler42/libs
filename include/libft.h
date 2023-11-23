@@ -6,11 +6,11 @@
 /*   By: fgabler <fgabler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:56:04 by fgabler           #+#    #+#             */
-/*   Updated: 2023/09/25 16:36:37 by fgabler          ###   ########.fr       */
+/*   Updated: 2023/11/23 16:07:29 by fgabler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#	ifndef LIBFT_H
+#ifndef LIBFT_H
 # define LIBFT_H
 
 /* get_next_line */
