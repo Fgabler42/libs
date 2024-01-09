@@ -6,7 +6,7 @@
 /*   By: fgabler <fgabler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 16:27:30 by fgabler           #+#    #+#             */
-/*   Updated: 2023/08/22 18:12:08 by fgabler          ###   ########.fr       */
+/*   Updated: 2024/01/09 16:54:35 by fgabler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,9 @@ static void	ft_checknum(unsigned int ret_from_arg, int *ret_len);
 
 void	ft_print_uns(unsigned int ret_from_arg, int *ret_len)
 {
-	if (ret_from_arg < 0)
-	{
-		put_char_mod('-', ret_len);
-		ret_from_arg *= -1;
-		ft_checknum(ret_from_arg, ret_len);
-	}
-	else
-		ft_checknum(ret_from_arg, ret_len);
+	put_char_mod('-', ret_len);
+	ret_from_arg *= -1;
+	ft_checknum(ret_from_arg, ret_len);
 }
 
 static void	ft_checknum(unsigned int ret_from_arg, int *ret_len)
