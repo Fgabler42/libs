@@ -6,7 +6,7 @@
 /*   By: fgabler <fgabler@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:46:08 by fritzgabler       #+#    #+#             */
-/*   Updated: 2023/08/22 17:30:29 by fgabler          ###   ########.fr       */
+/*   Updated: 2024/01/17 17:08:46 by fgabler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,8 @@ char	*get_next_line(int fd)
 	static char	*buffer;
 	char		*ret;
 
+	if (fd == 0)
+		return (NULL);
 	ret = NULL;
 	buffer = get_text_from_file(fd, buffer);
 	if (buffer == NULL)
