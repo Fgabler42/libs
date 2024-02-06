@@ -6,7 +6,7 @@
 /*   By: fgabler <mail@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 19:31:09 by fgabler           #+#    #+#             */
-/*   Updated: 2024/02/06 10:07:46 by fgabler          ###   ########.fr       */
+/*   Updated: 2024/02/06 14:15:37 by fgabler          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	free_dubble_array(char **arr)
 
 	i = 0;
 	while (arr[i] != NULL)
-		free(arr[i++]);
+		free_save(arr[i++]);
 	free(arr);
 	arr = NULL;
 }
