@@ -92,6 +92,7 @@ char			**copy_dubble_array(char **array);
 long			ft_strtol(const char *str);
 unsigned char	*ft_strjoin_mod_uns(char *s1, char *s2);
 size_t			ft_strlen_uns(const unsigned char *str);
+void			ft_free_string_save(char **string);
 
 /* dubble cirular lists */
 void			ft_clstadd_back(t_dubl_list **lst, t_dubl_list *new);
